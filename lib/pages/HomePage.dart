@@ -2,6 +2,7 @@ import 'package:facebook_ui_clone/config/palette.dart';
 import 'package:facebook_ui_clone/database/data.dart';
 import 'package:facebook_ui_clone/widgets/create-post-container.dart';
 import 'package:facebook_ui_clone/widgets/custom-button.dart';
+import 'package:facebook_ui_clone/widgets/rooms.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,6 +42,14 @@ class HomePage extends StatelessWidget {
           SliverToBoxAdapter(
             child: CreatePostContainer(
               currentUser: currentUser,
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+            sliver: SliverToBoxAdapter(
+              child: Rooms(
+                onlineUsers: onlineUsers,
+              ),
             ),
           )
         ],
