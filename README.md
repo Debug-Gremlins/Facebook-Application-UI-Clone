@@ -7,6 +7,14 @@ Facebook Home Page Layout Clone by Arnob Mahmud.
 
 ![fbui](https://user-images.githubusercontent.com/60808266/123903438-82ecb100-d990-11eb-8e55-846a432b2e58.png)
 
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/60808266/123904179-df9c9b80-d991-11eb-9b36-0235c4011855.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/60808266/123904230-f511c580-d991-11eb-9211-223d63fe575d.png"></td>
+  </tr>
+  </table>
+  
 ## Getting Started
 
 This project is a starting point for a Flutter application.
