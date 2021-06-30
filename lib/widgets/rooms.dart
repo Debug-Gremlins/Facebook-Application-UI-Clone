@@ -14,7 +14,7 @@ class Rooms extends StatelessWidget {
       height: height * .09,
       color: Colors.white,
       child: ListView.builder(
-          padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
           scrollDirection: Axis.horizontal,
           itemCount: 1 + onlineUsers.length,
           itemBuilder: (BuildContext context, int index) {

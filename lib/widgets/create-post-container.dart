@@ -49,6 +49,7 @@ class CreatePostContainer extends StatelessWidget {
                   label: Text('Live', style: TextStyle(color: Colors.black))),
               VerticalDivider(
                 width: 8.0,
+                thickness: 1.6,
               ),
               TextButton.icon(
                   onPressed: () {},
