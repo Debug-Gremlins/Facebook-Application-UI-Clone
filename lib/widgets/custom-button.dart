@@ -14,7 +14,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(6),
+      padding: EdgeInsets.only(bottom: 5, right: 5),
+      margin: EdgeInsets.all(5),
       decoration:
           BoxDecoration(color: Colors.grey[300], shape: BoxShape.circle),
       child: IconButton(

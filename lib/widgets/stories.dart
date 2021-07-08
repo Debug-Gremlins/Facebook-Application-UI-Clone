@@ -3,31 +3,28 @@ import 'package:facebook_ui_clone/config/palette.dart';
 import 'package:facebook_ui_clone/models/day_model.dart';
 import 'package:facebook_ui_clone/models/user_model.dart';
 import 'package:facebook_ui_clone/widgets/profile_avatar.dart';
+import 'package:facebook_ui_clone/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 class Stories extends StatelessWidget {
   final User currentUser;
   final List<Story> stories;
-  const Stories({Key key, 
-        @required this.currentUser, 
-        @required this.stories})
+  const Stories({Key key, @required this.currentUser, @required this.stories})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      color: Colors.white,
+      color: Responsive.isDesktop(context) ? Colors.transparent : Colors.white,
       child: ListView.builder(
-          padding: EdgeInsets.symmetric(vertical: 5.0, 
-          horizontal: 6.0),
+          padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 6.0),
           scrollDirection: Axis.horizontal,
           itemCount: 1 + stories.length,
           itemBuilder: (BuildContext context, int index) {
             if (index == 0) {
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6.0, 
-                vertical: 10.0),
+                padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 10.0),
                 child: _StoryCard(
                   isAddStory: true,
                   currentUser: currentUser,
@@ -36,8 +33,7 @@ class Stories extends StatelessWidget {
             } else {
               final Story story = stories[index - 1];
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 6.0, 
-                vertical: 10.0),
+                padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 10.0),
                 child: _StoryCard(story: story),
               );
             }
@@ -68,13 +64,13 @@ class _StoryCard extends StatelessWidget {
           child: CachedNetworkImage(
             imageUrl: isAddStory ? currentUser.imageUrl : story.imageUrl,
             height: double.infinity,
-            width: 110.0,
+            width: 110,
             fit: BoxFit.cover,
           ),
         ),
         Container(
           height: double.infinity,
-          width: 110.0,
+          width: 110,
           decoration: BoxDecoration(
               gradient: Palette.storyGradient,
               borderRadius: BorderRadius.circular(12.0)),

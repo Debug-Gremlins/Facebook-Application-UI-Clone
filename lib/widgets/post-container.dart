@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:facebook_ui_clone/config/palette.dart';
 import 'package:facebook_ui_clone/models/post_model.dart';
 import 'package:facebook_ui_clone/widgets/profile_avatar.dart';
+import 'package:facebook_ui_clone/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -12,7 +13,11 @@ class PostContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius:
+            Responsive.isDesktop(context) ? BorderRadius.circular(5) : null,
+      ),
       margin: EdgeInsets.symmetric(vertical: 5),
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Column(

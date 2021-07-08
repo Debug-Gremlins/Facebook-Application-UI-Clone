@@ -21,8 +21,10 @@ class ProfileAvatar extends StatelessWidget {
           child: Container(
             height: 15.0,
             width: 15.0,
-            decoration:
-                BoxDecoration(color: Colors.green, shape: BoxShape.circle),
+            decoration: BoxDecoration(
+                color: Colors.green,
+                shape: BoxShape.circle,
+                border: Border.all(width: 2, color: Colors.white)),
           ))
     ]);
   }
